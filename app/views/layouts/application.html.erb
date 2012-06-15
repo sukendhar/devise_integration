@@ -5,16 +5,94 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
 
- <ul class="hmenu">
-    <%= render 'shared/navigation' %>
-  </ul>
+
+<div class="navbar navbar-fixed-top">  
+  <div class="navbar-inner">  
+    <div class="container">   
+		 <ul class="nav">  
+		  <li class="active">  
+			<a class="brand" href="#">Sukendhar</a>  
+		  </li>  
+		  <li><a href="#">Home</a></li>  
+		  <li><a href="#">About Me</a></li>  
+		  <li><a href="#">Family</a></li>  
+		  <li><a href="#">Contact</a></li> 
+		</ul>  
+
+
+		<form class="navbar-search pull-right">  
+		  <input type="text" class="search-query" placeholder="Search">  
+		</form> 
+
+
+
+		<ul class="nav pull-right">  
+		  <li class="dropdown">  
+			<a href="#"  
+				  class="dropdown-toggle"  
+				  data-toggle="dropdown">  
+				  Social  
+				  <b class="caret"></b>  
+			</a>  
+			<ul class="dropdown-menu">  
+			 <li class="socials"><!-- Place this tag where you want the +1 button to render -->  
+		<g:plusone annotation="inline" width="150"></g:plusone>  
+		</li>  
+		  <li class="socials"><div class="fb-like" data-send="false" data-width="150" data-show-faces="true"></div></li>  
+		  <li class="socials"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>  
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>  
+			</ul>  
+		  </li>  
+		</ul>
+
+
+
+		<div id="fb-root"></div>  
+		<script>(function(d, s, id) {  
+		  var js, fjs = d.getElementsByTagName(s)[0];  
+		  if (d.getElementById(id)) return;  
+		  js = d.createElement(s); js.id = id;  
+		  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";  
+		  fjs.parentNode.insertBefore(js, fjs);  
+		}(document, 'script', 'facebook-jssdk'));</script> 
+
+
+		<ul class="nav pull-right"> 
+		 <%= render 'shared/navigation' %>
+		</ul>
+
+    </div>  
+  </div>  
+</div> 
+
+
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
   <% end %>
   <%= yield %>
 
+<!--
+<style>
+.sign_in{
+	background:black;
+	float:left;
+	width:400px;
+	height:360px;
+	padding-left:200px;
+	margin-left:400px;
+	margin-top:100px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+</style>
+-->
+
 </body>
 </html>
+
+
