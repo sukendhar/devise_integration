@@ -1,4 +1,12 @@
 Sampleapp::Application.routes.draw do
+  get "main/home"
+
+  get "main/aboutus"
+
+  get "main/services"
+
+  get "main/contactus"
+
   get "home/index"
 
   devise_for :users
