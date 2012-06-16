@@ -10,12 +10,16 @@
         html, body {
             height: 100%;
         }
+		.mainbody{
+		margin-left:100px;
+		}
         footer {
             color: #666;
             background: #222;
 			text-align:center;
-			margin-top:280px;
-            padding: 17px 0 18px 0;
+			margin-top:50px;
+			margin-left:-20px;
+            padding: 17px 0 18px 0px;
             border-top: 1px solid #000;
         }
         footer a {
@@ -103,12 +107,12 @@
 
  
 
-
+<div class="mainbody">
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
   <% end %>
   <%= yield %>
-
+</div>
 <!--
 <style>
 .sign_in{
