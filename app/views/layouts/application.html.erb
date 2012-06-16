@@ -6,6 +6,37 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <link href="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+<style>
+        html, body {
+            height: 100%;
+        }
+        footer {
+            color: #666;
+            background: #222;
+			text-align:center;
+            padding: 17px 0 18px 0;
+            border-top: 1px solid #000;
+        }
+        footer a {
+            color: #999;
+        }
+        footer a:hover {
+            color: #efefef;
+        }
+        .wrapper {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto -63px;
+        }
+        .push {
+            height: 63px;
+        }
+        /* not required for sticky footer; just pushes hero down a bit */
+        .wrapper > .container {
+            padding-top: 60px;
+        }
+    </style>
 </head>
 <body>
 
@@ -69,6 +100,8 @@
   </div>  
 </div> 
 
+ 
+
 
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
@@ -91,7 +124,11 @@
 }
 </style>
 -->
-
+<footer>
+      <div class="container">
+        ©2012 Sukendhar Reddy. All rights reserved.
+      </div>
+    </footer>
 </body>
 </html>
 
