@@ -1,16 +1,59 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require_self
+*= require_tree .
+*/
+
+*{
+margin:0px;
+padding:0px;
+}
+
+html, body {
+	height: 100%;
+}
+.mainbody{
+margin-left:auto;
+margin-right:auto;
+width:960px;
+position:relative;
+}
+footer {
+	color: #666;
+	background: #222;
+	text-align:center;
+	margin-top:50px;
+	margin-left:-20px;
+	padding: 17px 0 18px 0px;
+	border-top: 1px solid #000;
+}
+footer a {
+	color: #999;
+}
+footer a:hover {
+	color: #efefef;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -63px;
+}
+.push {
+	height: 63px;
+}
+/* not required for sticky footer; just pushes hero down a bit */
+.wrapper > .container {
+	padding-top: 60px;
+}
 
 header nav ul {
 list-style: none;
