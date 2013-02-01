@@ -1,2 +1,2 @@
-sampleapp
-=========
+Devise Integration
+==================
