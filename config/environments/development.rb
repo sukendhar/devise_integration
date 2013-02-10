@@ -47,8 +47,8 @@ Sampleapp::Application.configure do
     :port => 587,
 	:domain => "gmail.com",
     :authentication => :login,
-    :user_name => 'maisadeveloper1@gmail.com',
-    :password => 'maisapride',
+    :user_name => '',
+    :password => '',
  }
 
 end
